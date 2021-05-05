@@ -1,0 +1,33 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: Q-2019.12
+Date   : Tue May  4 19:37:05 2021
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: counter_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: done (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  counter_reg[0]/CK (DFFRX1)               0.00       0.00 r
+  counter_reg[0]/QN (DFFRX1)               0.58       0.58 r
+  U1065/Y (NAND2X1)                        0.18       0.76 f
+  U1064/Y (NOR4X1)                         0.16       0.92 r
+  U846/Y (AND3X1)                          0.19       1.10 r
+  done (out)                               0.00       1.10 r
+  data arrival time                                   1.10
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
